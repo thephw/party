@@ -11,8 +11,8 @@ builder = "flowerworkio/builder:focal"
 buildpacks = ["flowerworkio/asdf:focal", "flowerworkio/phoenix:focal"]
 
 
-[deploy]
-release_command = "/app/bin/migrate"
+# [deploy]
+# release_command = "/app/bin/migrate"
 
 [env]
 PHX_HOST = "thephw-party.fly.dev"
