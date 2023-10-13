@@ -3,12 +3,11 @@
 app = "thephw-party"
 kill_signal = "SIGTERM"
 kill_timeout = 5
-mounts = []
 processes = []
 
 [build]
 builder = "flowerworkio/builder:focal"
-buildpacks = ["flowerworkio/asdf:focal", "flowerworkio/phoenix:focal"]
+buildpacks = ["flowerworkio/asdf@0.0.3", "flowerworkio/phoenix@0.0.3"]
 
 
 # [deploy]
@@ -17,6 +16,10 @@ buildpacks = ["flowerworkio/asdf:focal", "flowerworkio/phoenix:focal"]
 [env]
 PHX_HOST = "thephw-party.fly.dev"
 PORT = "8080"
+
+[mounts]
+source = "thephw_party_data"
+destination = "/data"
 
 [[services]]
 internal_port = 8080
