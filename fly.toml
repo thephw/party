@@ -1,0 +1,37 @@
+# fly.toml file generated for thephw-party on 2023-10-13T14:09:33-04:00
+
+app = "thephw-party"
+kill_signal = "SIGTERM"
+kill_timeout = 5
+mounts = []
+processes = []
+
+[build]
+builder = "flowerworkio/builder:focal"
+buildpacks = ["flowerworkio/asdf:focal", "flowerworkio/phoenix:focal"]
+
+
+[deploy]
+release_command = "/app/bin/migrate"
+
+[env]
+PHX_HOST = "thephw-party.fly.dev"
+PORT = "8080"
+
+[[services]]
+internal_port = 8080
+processes = ["app"]
+protocol = "tcp"
+[services.concurrency]
+hard_limit = 25
+soft_limit = 20
+type = "connections"
+
+[[services.ports]]
+force_https = true
+handlers = ["http"]
+port = 80
+
+[[services.ports]]
+handlers = ["tls", "http"]
+port = 443
