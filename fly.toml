@@ -1,6 +1,7 @@
 # fly.toml file generated for thephw-party on 2023-10-13T14:09:33-04:00
 
 app = "thephw-party"
+primary_region = "atl"
 kill_signal = "SIGTERM"
 kill_timeout = 5
 processes = []
