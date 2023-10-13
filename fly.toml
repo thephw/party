@@ -11,7 +11,7 @@ buildpacks = ["flowerworkio/asdf@0.0.3", "flowerworkio/phoenix@0.0.3"]
 
 
 # [deploy]
-# release_command = "/app/bin/migrate"
+release_command = "/layers/flowerworkio_phoenix/phoenix/bin/party eval \"Party.Release.migrate\""
 
 [env]
 PHX_HOST = "thephw-party.fly.dev"

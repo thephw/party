@@ -7,12 +7,13 @@ defmodule Party.Application do
 
   @impl true
   def start(_type, _args) do
+    Party.Release.migrate()
+
     children = [
       PartyWeb.Telemetry,
       Party.Repo,
       {Ecto.Migrator,
-        repos: Application.fetch_env!(:party, :ecto_repos),
-        skip: skip_migrations?()},
+       repos: Application.fetch_env!(:party, :ecto_repos), skip: skip_migrations?()},
       {DNSCluster, query: Application.get_env(:party, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Party.PubSub},
       # Start a worker by calling: Party.Worker.start_link(arg)
