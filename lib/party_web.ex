@@ -33,19 +33,20 @@ defmodule PartyWeb do
     apple-icon-60x60.png
     apple-icon-72x72.png
     apple-icon-76x76.png
-    apple-icon-precomposed.png	favicon-96x96.png
+    apple-icon-precomposed.png
     apple-icon.png
     assets
     browserconfig.xml
     favicon-16x16.png
-    favicon-32x32.png\
-    favicon.ico\
-    images\
-    manifest.json\
-    ms-icon-144x144.png\
-    ms-icon-150x150.png\
-    ms-icon-310x310.png\
-    ms-icon-70x70.png\
+    favicon-32x32.png
+    favicon-96x96.png
+    favicon.ico
+    images
+    manifest.json
+    ms-icon-144x144.png
+    ms-icon-150x150.png
+    ms-icon-310x310.png
+    ms-icon-70x70.png
     robots.txt
   )
 
