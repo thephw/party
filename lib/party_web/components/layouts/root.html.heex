@@ -4,12 +4,73 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title suffix=" · Phoenix Framework">
-      <%= assigns[:page_title] || "Party" %>
+    <.live_title suffix="Party!">
+      <%= assigns[:page_title] || "" %>
     </.live_title>
+    <meta name="description" content={assigns[:description]} />
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
+    <meta property="og:title" content={"ThePHW™ #{assigns[:page_title]}"} />
+    <meta property="og:description" content={assigns[:description]} />
+    <meta property="og:image" content={static_path(@conn, "/images/thephw.svg")} />
+    <link rel="apple-touch-icon" sizes="57x57" href={static_path(@conn, "/apple-icon-57x57.png")} />
+    <link rel="apple-touch-icon" sizes="60x60" href={static_path(@conn, "/apple-icon-60x60.png")} />
+    <link rel="apple-touch-icon" sizes="72x72" href={static_path(@conn, "/apple-icon-72x72.png")} />
+    <link rel="apple-touch-icon" sizes="76x76" href={static_path(@conn, "/apple-icon-76x76.png")} />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href={static_path(@conn, "/apple-icon-114x114.png")}
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href={static_path(@conn, "/apple-icon-120x120.png")}
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href={static_path(@conn, "/apple-icon-144x144.png")}
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href={static_path(@conn, "/apple-icon-152x152.png")}
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={static_path(@conn, "/apple-icon-180x180.png")}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href={static_path(@conn, "/android-icon-192x192.png")}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href={static_path(@conn, "/favicon-32x32.png")}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href={static_path(@conn, "/favicon-96x96.png")}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href={static_path(@conn, "/favicon-16x16.png")}
+    />
+    <link rel="manifest" href={static_path(@conn, "/manifest.json")} />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#000000" />
   </head>
   <body class="antialiased">
     <%= @inner_content %>
