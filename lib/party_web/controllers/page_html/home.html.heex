@@ -1,8 +1,8 @@
 <.flash_group flash={@flash} />
-<main class="bg-slate-950 min-h-screen">
-  <div class=" text-red-500 mx-auto container flex flex-col items-center justify-center h-screen">
+<main class="min-h-screen">
+  <div class=" text-slate-50 font-bold mx-auto container flex flex-col items-center justify-center h-screen z-10">
     <img class="rounded-lg" src={static_path(@conn, "/images/ThePHW.png")} />
-    <h1 class="bg-inherit text-4xl font-bold">
+    <h1 class="bg-inherit text-4xl">
       <span class="md:-ml-12 ml-0">👻</span> Scareoke Halloween Costume Contest 🎃
     </h1>
     <pre>
@@ -13,10 +13,26 @@
     <p class="mt-8 mb-8">
       Don that costume and head to the house for a firepit, karaoke, snacks, and refreshments.
     </p>
-    <h2 class="text-xl">Prizes for:</h2>
     <ul class="list-disc pl-8">
+      <h2 class="text-xl">Prizes for:</h2>
       <li>Best solo costume</li>
       <li>Best group costume</li>
     </ul>
   </div>
 </main>
+<div class="slider-box hidden">
+  <input id="slider" type="range" min="1" max="199" step="1" />
+  <div id="range">1000px / 10.0s</div>
+</div>
+<ul id="scene" data-friction-x="0.03" data-friction-y="0.05">
+  <li class="layer" id="specks" data-depth="0.1"></li>
+  <li class="layer" id="layer-1" data-depth="0.15">
+    <div class="img" id="img-1"></div>
+  </li>
+  <li class="layer" id="layer-2" data-depth="0.25">
+    <div class="img" id="img-2"></div>
+  </li>
+  <li class="layer" id="layer-3" data-depth="0.45">
+    <div class="img" id="img-3"></div>
+  </li>
+</ul>
