@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title suffix="Party!">
+    <.live_title>
       <%= assigns[:page_title] || "" %>
     </.live_title>
     <meta name="description" content={assigns[:description]} />
@@ -12,8 +12,9 @@
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
     <meta property="og:title" content={"ThePHW™ #{assigns[:page_title]}"} />
+    <meta property="og:url" content="https://party.thephw.com" />
     <meta property="og:description" content={assigns[:description]} />
-    <meta property="og:image" content={static_path(@conn, "/images/thephw.svg")} />
+    <meta property="og:image" content={static_path(@conn, "/images/ThePHW.png")} />
     <link rel="apple-touch-icon" sizes="57x57" href={static_path(@conn, "/apple-icon-57x57.png")} />
     <link rel="apple-touch-icon" sizes="60x60" href={static_path(@conn, "/apple-icon-60x60.png")} />
     <link rel="apple-touch-icon" sizes="72x72" href={static_path(@conn, "/apple-icon-72x72.png")} />
