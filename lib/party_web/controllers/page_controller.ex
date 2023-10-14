@@ -6,8 +6,9 @@ defmodule PartyWeb.PageController do
     # so skip the default app layout.
     conn =
       conn
-      |> assign(:page_title, "Scareoke Halloween Party")
+      |> assign(:page_title, "Scareoke Halloween Party 10/27")
       |> assign(:description, "Costume contest and karoke party!")
+      |> assign(:url, "https://party.thephw.com")
 
     render(conn, :home, layout: false)
   end
