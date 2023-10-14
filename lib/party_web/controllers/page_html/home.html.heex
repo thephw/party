@@ -1,7 +1,10 @@
 <.flash_group flash={@flash} />
 <main class="min-h-screen">
   <div class=" text-slate-50 font-bold mx-auto container flex flex-col items-center justify-center h-screen z-10">
-    <img class="rounded-lg mb-8 max-w-screen-md" src={static_path(@conn, "/images/scareoke.png")} />
+    <img
+      class="rounded-lg mb-8 max-w-full md:max-w-screen-md"
+      src={static_path(@conn, "/images/scareoke.png")}
+    />
     <h1 class="bg-inherit text-4xl">
       <span class="md:-ml-12 ml-0">👻</span> Scareoke Halloween Costume Contest 🎃
     </h1>
