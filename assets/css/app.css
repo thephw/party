@@ -4,7 +4,6 @@
 
 html {
   background: linear-gradient(135deg, #215971 0%, #655900 100%) fixed;
-  overflow: hidden;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -17,6 +16,14 @@ main {
   opacity: 0.8;
 }
 
+@media screen and (max-width: 600px) {
+  main {
+    top: 1em;
+    left: 2.5vw;
+    width: 95vw;
+    font-size: 0.85em;
+  }
+}
 
 li {
   list-style-type: none;
