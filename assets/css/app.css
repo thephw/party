@@ -16,7 +16,7 @@ main {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   main {
     top: 1em;
     left: 2.5vw;
@@ -64,8 +64,8 @@ li {
 
 .img {
   position: absolute;
-  height: 100000px;
-  width: 100000px;
+  height: 12000px;
+  width: 12000px;
   top: -8500px;
   left: -8000px;
   animation-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
